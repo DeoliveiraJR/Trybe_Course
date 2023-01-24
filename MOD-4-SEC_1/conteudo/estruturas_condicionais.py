@@ -8,24 +8,27 @@
 
 # Qualquer valor acima do que já foi mencionado a pessoa desenvolvedora é considerada liderança.
 
-position = ""
-if salary <= 2000:
-    position = "estagiário"
-elif 2000 < salary <= 5800:
-    position = "júnior"
-elif 5800 < salary <= 7500:
-    position = "pleno"
-elif 7500 < salary <= 10500:
-    position = "senior"
+SALARY = 100
+
+POSITION = ""
+if SALARY <= 2000:
+    POSITION = "estagiário"
+elif 2000 < SALARY <= 5800:
+    POSITION = "júnior"
+elif 5800 < SALARY <= 7500:
+    POSITION = "pleno"
+elif 7500 < SALARY <= 10500:
+    POSITION = "senior"
 else:
-    position = "líder"
+    POSITION = "líder"
 
-# Em alguns casos, em que não seja prejudicada a legibilidade, podemos criar estruturas de mapeamento (dicts) para simplificar o aninhamento de condicionais. Como o exemplo a seguir:
+# Em alguns casos, em que não seja prejudicada a legibilidade, podemos criar estruturas
+# de mapeamento (dicts) para simplificar o aninhamento de condicionais. Como o exemplo a seguir:
 
-key = "id"
+KEY = "id"
 from_to = {
     "id": "identifier",
     "mail": "email",
     "lastName": "last_name",
 }
-print(from_to[key])
+print(from_to[KEY])
