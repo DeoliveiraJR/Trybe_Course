@@ -1,0 +1,96 @@
+## STEP 1 - ADICIONANDO VERSION & SERVICES:
+# version: '3'
+# services:
+#  frontend:
+#    build: frontend/    # Especificamos o contexto, ou seja, a pasta onde está o Dockerfile.
+#  backend:
+#    build: backend/     # Mesmo caso aqui.
+#  database:
+#    image: betrybe/docker-compose-example-database:v1    # Especificamos a Imagem Docker diretamente.
+
+## STEP 2 - ADICIONANDO BUILD:
+# version: '3'
+# services:
+#  frontend:
+#    build: frontend/    # Especificamos o contexto, ou seja, a pasta onde está o Dockerfile.
+#  backend:
+#    build: backend/     # Mesmo caso aqui.
+#  database:
+#    image: betrybe/docker-compose-example-database:v1    # Especifica   
+
+## STEP 3 - MAPEANDO PORTAS:
+# version: '3'
+# services:
+#  frontend:
+#    build: frontend/
+#    restart: on-failure
+#    ports:
+#      - 3000:3000
+#  backend:
+#    build: backend/
+#    restart: on-failure
+#    ports:
+#      - 3001:3001
+#  database:
+#    image: betrybe/docker-compose-example-database:v1
+#    restart: on-failure
+
+## STEP 4 - REINICIALIZANDO CONTAINERS DEFAULT:
+# version: '3'
+# services:
+#  frontend:
+#    build: frontend/
+#    restart: on-failure
+#    ports:
+#      - 3000:3000
+#  backend:
+#    build: backend/
+#    restart: on-failure
+#    ports:
+#      - 3001:3001
+#  database:
+#    image: betrybe/docker-compose-example-database:v1
+#    restart: on-failure
+
+## STEP 5 - ADICIONANDO VARIÁVEIS DE AMBIENTE:
+# version: '3'
+# services:
+#  frontend:
+#    build: frontend/
+#    restart: on-failure
+#    ports:
+#      - 3000:3000
+#  backend:
+#    build: backend/
+#    restart: on-failure
+#    ports:
+#      - 3001:3001
+#    environment:
+#      - DB_HOST=database
+#  database:
+#    image: betrybe/docker-compose-example-database:v1
+#    restart: on-failure
+
+## STEP 6 - CRIANDO AS DEPENDENCIAS:
+version: "3.8"
+services:
+  frontend:
+    build: frontend/
+    restart: on-failure
+    ports:
+      - 3000:3000
+    depends_on:
+      - backend
+  backend:
+    build: backend/
+    restart: on-failure
+    ports:
+      - 3001:3001
+    environment:
+      - DB_HOST=database
+    depends_on:
+      - database
+  database:
+    image: betrybe/docker-compose-example-database:v1
+    restart: on-failure
+
