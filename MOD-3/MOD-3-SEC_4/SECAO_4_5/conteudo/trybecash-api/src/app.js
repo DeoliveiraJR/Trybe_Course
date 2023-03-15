@@ -8,4 +8,4 @@ const app = express();
 app.use(express.json());
 app.use('/people', peopleRoutes);
 
-module.exports = app;
+module.exports = app;   
