@@ -41,6 +41,6 @@ fenestration_surfaces_data = parse_fenestration_surface_data(file_path)
 print('Fenestration_surfaces ===', fenestration_surfaces_data)
 
 # Visualizando os dados extraídos de FenestrationSurface:Detailed
-print("Fenestration Surfaces:")
-for surface in fenestration_surfaces_data:
-    print(surface)
+# print("Fenestration Surfaces:")
+# for surface in fenestration_surfaces_data:
+#     print(surface)
