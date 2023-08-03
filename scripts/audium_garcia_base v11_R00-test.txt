@@ -1,0 +1,119 @@
+!-   ===========  ALL OBJECTS IN CLASS: BUILDINGSURFACE:DETAILED ===========
+
+BuildingSurface:Detailed,
+    D244D5,                  !- Name
+    Wall,                    !- Surface Type
+    Interior Wall,           !- Construction Name
+    13 circ 1,               !- Zone Name
+    Surface,                !- Outside Boundary Condition
+    704E5E,                        !- Outside Boundary Condition Object
+    NoSun,              !- Sun Exposure
+    NoWind,             !- Wind Exposure
+    ,                        !- View Factor to Ground
+    4,                       !- Number of Vertices
+    6.450003091747,          !- Vertex 1 X-coordinate {m}
+    9.369999994735,          !- Vertex 1 Y-coordinate {m}
+    8.640000000000,          !- Vertex 1 Z-coordinate {m}
+    6.450003091747,          !- Vertex 2 X-coordinate {m}
+    9.369999994735,          !- Vertex 2 Y-coordinate {m}
+    5.760000000000,          !- Vertex 2 Z-coordinate {m}
+    6.450000005530,          !- Vertex 3 X-coordinate {m}
+    7.139999996155,          !- Vertex 3 Y-coordinate {m}
+    5.760000000000,          !- Vertex 3 Z-coordinate {m}
+    6.450000005530,          !- Vertex 4 X-coordinate {m}
+    7.139999996155,          !- Vertex 4 Y-coordinate {m}
+    8.640000000000;          !- Vertex 4 Z-coordinate {m}
+
+BuildingSurface:Detailed,
+    89B09A,                  !- Name
+    Floor,                   !- Surface Type
+    Interior Floor,          !- Construction Name
+    1308 sala,               !- Zone Name
+    Surface,                  !- Outside Boundary Condition
+    F2C560,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    ,                        !- View Factor to Ground
+    4,                       !- Number of Vertices
+    6.450006523952,          !- Vertex 1 X-coordinate {m}
+    2.430000016607,          !- Vertex 1 Y-coordinate {m}
+    5.760000000000,          !- Vertex 1 Z-coordinate {m}
+    6.450009886959,          !- Vertex 2 X-coordinate {m}
+    0.000000000000,          !- Vertex 2 Y-coordinate {m}
+    5.760000000000,          !- Vertex 2 Z-coordinate {m}
+    3.920000000787,          !- Vertex 3 X-coordinate {m}
+    0.000000000000,          !- Vertex 3 Y-coordinate {m}
+    5.760000000000,          !- Vertex 3 Z-coordinate {m}
+    3.920000000787,          !- Vertex 4 X-coordinate {m}
+    2.430000016607,          !- Vertex 4 Y-coordinate {m}
+    5.760000000000;          !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    F30598,                  !- Name
+    Window,                  !- Surface Type
+    Exterior Window,         !- Construction Name
+    DFFAEC,                  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    2.435000005460,          !- Vertex 1 X-coordinate {m}
+    6.850000016718,          !- Vertex 1 Y-coordinate {m}
+    7.880000000000,          !- Vertex 1 Z-coordinate {m}
+    2.435000005460,          !- Vertex 2 X-coordinate {m}
+    6.850000016718,          !- Vertex 2 Y-coordinate {m}
+    6.460000000000,          !- Vertex 2 Z-coordinate {m}
+    2.435000005460,          !- Vertex 3 X-coordinate {m}
+    5.890000016718,          !- Vertex 3 Y-coordinate {m}
+    6.460000000000,          !- Vertex 3 Z-coordinate {m}
+    2.435000005460,          !- Vertex 4 X-coordinate {m}
+    5.890000016718,          !- Vertex 4 Y-coordinate {m}
+    7.880000000000;          !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    F929C2,                  !- Name
+    Window,                  !- Surface Type
+    Exterior Window,         !- Construction Name
+    8C9502,                  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    4.220000005330,          !- Vertex 1 X-coordinate {m}
+    0.000000000000,          !- Vertex 1 Y-coordinate {m}
+    7.880000000000,          !- Vertex 1 Z-coordinate {m}
+    4.220000005330,          !- Vertex 2 X-coordinate {m}
+    0.000000000000,          !- Vertex 2 Y-coordinate {m}
+    6.460000000000,          !- Vertex 2 Z-coordinate {m}
+    6.130000005330,          !- Vertex 3 X-coordinate {m}
+    0.000000000000,          !- Vertex 3 Y-coordinate {m}
+    6.460000000000,          !- Vertex 3 Z-coordinate {m}
+    6.130000005330,          !- Vertex 4 X-coordinate {m}
+    0.000000000000,          !- Vertex 4 Y-coordinate {m}
+    7.880000000000;          !- Vertex 4 Z-coordinate {m}
+
+FenestrationSurface:Detailed,
+    9C2545,                  !- Name
+    Door,                    !- Surface Type
+    Interior Door,           !- Construction Name
+    839488,                  !- Building Surface Name
+    B16A47,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    3.365000001941,          !- Vertex 1 X-coordinate {m}
+    2.430000016607,          !- Vertex 1 Y-coordinate {m}
+    7.860000000000,          !- Vertex 1 Z-coordinate {m}
+    3.365000001941,          !- Vertex 2 X-coordinate {m}
+    2.430000016607,          !- Vertex 2 Y-coordinate {m}
+    5.760000000000,          !- Vertex 2 Z-coordinate {m}
+    2.745000001941,          !- Vertex 3 X-coordinate {m}
+    2.430000016607,          !- Vertex 3 Y-coordinate {m}
+    5.760000000000,          !- Vertex 3 Z-coordinate {m}
+    2.745000001941,          !- Vertex 4 X-coordinate {m}
+    2.430000016607,          !- Vertex 4 Y-coordinate {m}
+    7.860000000000;          !- Vertex 4 Z-coordinate {m}
+
