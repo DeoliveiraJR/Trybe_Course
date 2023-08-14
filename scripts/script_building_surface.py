@@ -44,8 +44,7 @@ def parse_building_surface_data(file_path):
 file_path = './audium_garcia_base v11_R00-test.txt'
 surfaces_data = parse_building_surface_data(file_path)
 
-
-print('Building_surfaces ===', surfaces_data)
+# print('Building_surfaces ===', surfaces_data)
 
 # Visualizando os dados extraídos
 # for surface in surfaces_data:
