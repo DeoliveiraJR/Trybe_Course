@@ -68,23 +68,26 @@ if __name__ == "__main__":
         fenestration_surfaces_data_after = parse_fenestration_surface_data(file_path)
 
         # Visualizando os dados extraídos
-        print("Building Surfaces:")
-        for surface in building_surfaces_data:
-            print(surface)
+        # print("Building Surfaces:")
+        # for surface in building_surfaces_data:
+        #     print(surface)
 
-        print("\nFenestration Surfaces (Antes das Regras):")
-        for surface in fenestration_surfaces_data:
-            print(surface)
+        # print("\nFenestration Surfaces (Antes das Regras):")
+        # for surface in fenestration_surfaces_data:
+        #     print(surface)
 
         apply_rules_to_fenestration_surfaces(building_surfaces_data, fenestration_surfaces_data_after)
+
+        # print("\nFenestration Surfaces (Depois das Regras):")
+        # for surface in fenestration_surfaces_data_after:
+        #     print(surface)
 
         for key, fenestration_surface in enumerate(fenestration_surfaces_data):
             original_name = fenestration_surface['Name']
             new_name = fenestration_surfaces_data_after[key]['Name']
             content = content.replace(original_name, new_name, 1)
-            print('Index:', key)
-            print('Original Name:', original_name)
-            print('New Name:', new_name)
 
         with open(file_path, 'w') as file:
             file.write(content)
+
+        print('\n!!! Arquivo alterado com sucesso !!!')
