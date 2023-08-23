@@ -42,7 +42,7 @@ if __name__ == "__main__":
         for key, fenestration_surface in enumerate(fenestration_surfaces_data):
             original_name = fenestration_surface['Name']
             new_name = fenestration_surfaces_data_after[key]['Name']
-            content = content.replace(original_name, new_name, 1)
+            content = content.replace(original_name, new_name, 1)   
 
         with open(file_path, 'w') as file:
             file.write(content)

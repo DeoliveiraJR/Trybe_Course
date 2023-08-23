@@ -1,76 +1,3 @@
-# from script_building_surface import parse_building_surface_data
-# from script_fenestration_surface import parse_fenestration_surface_data
-
-# # 1. Importar e rodar as funções de parsing e armazenar o resultado
-# file_path = './audium_garcia_base v11_R00-test.txt'
-# building_surfaces_data = parse_building_surface_data(file_path)
-# fenestration_surfaces_data = parse_fenestration_surface_data(file_path)
-
-# # 2. Iterar em cada elemento do Fenestration Surfaces e aplicar a regra
-# for fenestration_surface in fenestration_surfaces_data:
-#     construction_name = fenestration_surface['Construction Name']
-
-#     if construction_name == 'Interior Door':
-#         building_surface_name = fenestration_surface['Building Surface Name']
-
-#         for building_surface in building_surfaces_data:
-#             if building_surface['Name'] == building_surface_name:
-#                 zone_name = building_surface['Zone Name']
-#                 break
-
-#         if 'quarto' in zone_name:
-#             zone_name_1 = 'quarto'
-#         elif 'sala' in zone_name:
-#             zone_name_1 = 'sala'
-#         elif 'wc' in zone_name:
-#             zone_name_1 = 'wc'
-#         elif 'circ' in zone_name:
-#             zone_name_1 = 'circ'
-#         else:
-#             zone_name_1 = None
-
-#         fenestration_surface['Zone-name-1'] = zone_name_1
-
-# # 3. Aplicar a segunda lógica
-# for fenestration_surface in fenestration_surfaces_data:
-#     zone_name_1 = fenestration_surface.get('Zone-name-1')
-    
-#     if zone_name_1 is not None:
-#         outside_boundary_condition_object = fenestration_surface['Outside Boundary Condition Object']
-
-#         for linked_fenestration_surface in fenestration_surfaces_data:
-#             if linked_fenestration_surface.get('Name') == outside_boundary_condition_object:
-#                 zone_name_2 = linked_fenestration_surface.get('Zone-name-1')
-#                 fenestration_surface['Zone-name-2'] = zone_name_2
-#                 break
-
-# # 4. Aplicar a terceira lógica
-# for fenestration_surface in fenestration_surfaces_data:
-#     zone_name_1 = fenestration_surface.get('Zone-name-1')
-#     zone_name_2 = fenestration_surface.get('Zone-name-2')
-#     name = fenestration_surface.get('Name')
-    
-#     if zone_name_1 == 'sala' and zone_name_2 == 'quarto':
-#         fenestration_surface['Name'] = 'PQ-' + name
-#     elif zone_name_1 == 'quarto' and zone_name_2 == 'sala':
-#         fenestration_surface['Name'] = 'PQ-' + name
-#     elif zone_name_1 == 'sala' and zone_name_2 == 'wc':
-#         fenestration_surface['Name'] = 'PB-' + name
-#     elif zone_name_1 == 'wc' and zone_name_2 == 'sala':
-#         fenestration_surface['Name'] = 'PB-' + name
-#     elif zone_name_1 == 'wc' and zone_name_2 == 'quarto':
-#         fenestration_surface['Name'] = 'PB-' + name
-#     elif zone_name_1 == 'quarto' and zone_name_2 == 'wc':
-#         fenestration_surface['Name'] = 'PB-' + name
-#     elif zone_name_1 == 'sala' and zone_name_2 == 'circ':
-#         fenestration_surface['Name'] = 'PS-' + name
-#     elif zone_name_1 == 'circ' and zone_name_2 == 'sala':
-#         fenestration_surface['Name'] = 'PS-' + name
-
-# # Imprimindo o resultado
-# print("Fenestration Surfaces:")
-# for fenestration_surface in fenestration_surfaces_data:
-#     print(fenestration_surface)
 import re
 from script_building_surface import parse_building_surface_data
 from script_fenestration_surface import parse_fenestration_surface_data
@@ -101,7 +28,7 @@ def apply_rules_to_fenestration_surfaces(building_surfaces_data, fenestration_su
     # 2. Aplicar a segunda lógica
     for fenestration_surface in fenestration_surfaces_data:
         outside_boundary_condition_object = fenestration_surface.get('Outside Boundary Condition Object')
-        
+
         for fenestration_surface_2 in fenestration_surfaces_data:
             if fenestration_surface_2['Name'] == outside_boundary_condition_object:
                 fenestration_surface['Zone-name-2'] = fenestration_surface_2.get('Zone-name-1')
@@ -112,7 +39,7 @@ def apply_rules_to_fenestration_surfaces(building_surfaces_data, fenestration_su
         zone_name_1 = fenestration_surface.get('Zone-name-1')
         zone_name_2 = fenestration_surface.get('Zone-name-2')
         name = fenestration_surface.get('Name')
-        
+
         if zone_name_1 == 'sala' and zone_name_2 == 'quarto':
             fenestration_surface['Name'] = 'PQ-' + name
         elif zone_name_1 == 'quarto' and zone_name_2 == 'sala':
@@ -146,7 +73,8 @@ if __name__ == "__main__":
         for key, fenestration_surface in enumerate(fenestration_surfaces_data):
             original_name = fenestration_surface['Name']
             new_name = fenestration_surfaces_data_after[key]['Name']
-            content = content.replace(original_name, new_name, 1)
+            if original_name in content:
+                content = content.replace(original_name, new_name)
 
         with open(file_path, 'w') as file:
             file.write(content)
