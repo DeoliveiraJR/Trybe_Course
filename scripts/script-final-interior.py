@@ -24,6 +24,10 @@ def apply_rules_to_fenestration_surfaces(building_surfaces_data, fenestration_su
                 fenestration_surface['Zone-name-1'] = 'wc'
             elif 'circ' in zone_name:
                 fenestration_surface['Zone-name-1'] = 'circ'
+            elif 'suite' in zone_name:
+                fenestration_surface['Zone-name-1'] = 'suite'
+            elif 'office' in zone_name:
+                fenestration_surface['Zone-name-1'] = 'office'
 
     # 2. Aplicar a segunda lógica
     for fenestration_surface in fenestration_surfaces_data:
@@ -41,22 +45,41 @@ def apply_rules_to_fenestration_surfaces(building_surfaces_data, fenestration_su
         name = fenestration_surface.get('Name')
 
         if zone_name_1 == 'sala' and zone_name_2 == 'quarto':
-            fenestration_surface['Name'] = 'PQ-' + name
+            fenestration_surface['Name'] = 'pq-' + name
         elif zone_name_1 == 'quarto' and zone_name_2 == 'sala':
-            fenestration_surface['Name'] = 'PQ-' + name
+            fenestration_surface['Name'] = 'pq-' + name
+        elif zone_name_1 == 'sala' and zone_name_2 == 'suite':
+            fenestration_surface['Name'] = 'pq-' + name
+        elif zone_name_1 == 'suite' and zone_name_2 == 'sala':
+            fenestration_surface['Name'] = 'pq-' + name
         elif zone_name_1 == 'sala' and zone_name_2 == 'wc':
-            fenestration_surface['Name'] = 'PB-' + name
+            fenestration_surface['Name'] = 'pb-' + name
         elif zone_name_1 == 'wc' and zone_name_2 == 'sala':
-            fenestration_surface['Name'] = 'PB-' + name
+            fenestration_surface['Name'] = 'pb-' + name
         elif zone_name_1 == 'wc' and zone_name_2 == 'quarto':
-            fenestration_surface['Name'] = 'PB-' + name
+            fenestration_surface['Name'] = 'pb-' + name
         elif zone_name_1 == 'quarto' and zone_name_2 == 'wc':
-            fenestration_surface['Name'] = 'PB-' + name
+            fenestration_surface['Name'] = 'pb-' + name
         elif zone_name_1 == 'sala' and zone_name_2 == 'circ':
-            fenestration_surface['Name'] = 'PS-' + name
+            fenestration_surface['Name'] = 'ps-' + name
         elif zone_name_1 == 'circ' and zone_name_2 == 'sala':
-            fenestration_surface['Name'] = 'PS-' + name
-
+            fenestration_surface['Name'] = 'ps-' + name
+        elif zone_name_1 == 'quarto' and zone_name_2 == 'circ':
+            fenestration_surface['Name'] = 'pq-' + name
+        elif zone_name_1 == 'circ' and zone_name_2 == 'quarto':
+            fenestration_surface['Name'] = 'pq-' + name
+        elif zone_name_1 == 'quarto' and zone_name_2 == 'suite':
+            fenestration_surface['Name'] = 'pq-' + name
+        elif zone_name_1 == 'suite' and zone_name_2 == 'quarto':
+            fenestration_surface['Name'] = 'pq-' + name
+        elif zone_name_1 == 'wc' and zone_name_2 == 'suite':
+            fenestration_surface['Name'] = 'pb-' + name
+        elif zone_name_1 == 'suite' and zone_name_2 == 'wc':
+            fenestration_surface['Name'] = 'pb-' + name
+        elif zone_name_1 == 'sala' and zone_name_2 == 'office':
+            fenestration_surface['Name'] = 'pq-' + name
+        elif zone_name_1 == 'office' and zone_name_2 == 'sala':
+            fenestration_surface['Name'] = 'pq-' + name
 
 if __name__ == "__main__":
     file_path = './audium_garcia_base v11_R00-test.txt'
