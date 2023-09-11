@@ -20,6 +20,8 @@ def apply_rules_to_fenestration_surfaces(building_surfaces_data, fenestration_su
                     fenestration_surface['Name'] = 'pvs-' + fenestration_surface['Name']
                 elif 'quarto' in zone_name and surface_type == 'GlassDoor':
                     fenestration_surface['Name'] = 'pvq-' + fenestration_surface['Name']    
+                elif 'circ' in zone_name and surface_type == 'GlassDoor':
+                    fenestration_surface['Name'] = 'pc-' + fenestration_surface['Name']
                 elif 'sala' in zone_name and surface_type == 'Window':
                     fenestration_surface['Name'] = 'js-' + fenestration_surface['Name']
                 elif 'quarto' in zone_name and surface_type == 'Window':
@@ -28,6 +30,8 @@ def apply_rules_to_fenestration_surfaces(building_surfaces_data, fenestration_su
                     fenestration_surface['Name'] = 'jb-' + fenestration_surface['Name']
                 elif 'suite' in zone_name and surface_type == 'Window':
                     fenestration_surface['Name'] = 'jq-' + fenestration_surface['Name']
+                elif 'circ' in zone_name and surface_type == 'Window':
+                    fenestration_surface['Name'] = 'jc-' + fenestration_surface['Name']
 
 if __name__ == "__main__":
     file_path = './audium_garcia_base v11_R00-test.txt'
