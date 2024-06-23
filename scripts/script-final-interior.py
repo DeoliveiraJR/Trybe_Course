@@ -28,6 +28,8 @@ def apply_rules_to_fenestration_surfaces(building_surfaces_data, fenestration_su
                 fenestration_surface['Zone-name-1'] = 'suite'
             elif 'office' in zone_name:
                 fenestration_surface['Zone-name-1'] = 'office'
+            elif 'studio' in zone_name:
+                fenestration_surface['Zone-name-1'] = 'studio'
 
     # 2. Aplicar a segunda lógica
     for fenestration_surface in fenestration_surfaces_data:
@@ -80,6 +82,22 @@ def apply_rules_to_fenestration_surfaces(building_surfaces_data, fenestration_su
             fenestration_surface['Name'] = 'pq-' + name
         elif zone_name_1 == 'office' and zone_name_2 == 'sala':
             fenestration_surface['Name'] = 'pq-' + name
+        elif zone_name_1 == 'sala' and zone_name_2 == 'studio':
+            fenestration_surface['Name'] = 'pk-' + name
+        elif zone_name_1 == 'studio' and zone_name_2 == 'sala':
+            fenestration_surface['Name'] = 'pk-' + name
+        elif zone_name_1 == 'quarto' and zone_name_2 == 'studio':
+            fenestration_surface['Name'] = 'pk-' + name
+        elif zone_name_1 == 'studio' and zone_name_2 == 'quarto':
+            fenestration_surface['Name'] = 'pk-' + name
+        elif zone_name_1 == 'circ' and zone_name_2 == 'studio':
+            fenestration_surface['Name'] = 'pk-' + name
+        elif zone_name_1 == 'studio' and zone_name_2 == 'circ':
+            fenestration_surface['Name'] = 'pk-' + name
+        elif zone_name_1 == 'suite' and zone_name_2 == 'studio':
+            fenestration_surface['Name'] = 'pk-' + name
+        elif zone_name_1 == 'studio' and zone_name_2 == 'suite':
+            fenestration_surface['Name'] = 'pk-' + name
 
 if __name__ == "__main__":
     file_path = './audium_garcia_base v11_R00-test.txt'

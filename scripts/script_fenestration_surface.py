@@ -41,4 +41,4 @@ def parse_fenestration_surface_data(file_path):
 file_path = './audium_garcia_base v11_R00-test.txt'
 fenestration_surfaces_data = parse_fenestration_surface_data(file_path)
 
-# print('Fenestration Surfaces ===', fenestration_surfaces_data)
+print('Fenestration Surfaces ===', fenestration_surfaces_data)

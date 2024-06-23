@@ -1,0 +1,82 @@
+FenestrationSurface:Detailed,
+    72F809,                  !- Name
+    GlassDoor,               !- Surface Type
+    Exterior Door,           !- Construction Name
+    89DD7C,                  !- Building Surface Name
+    ,                        !- Outside Boundary Condition Object
+    ,                        !- View Factor to Ground
+    ,                        !- Frame and Divider Name
+    ,                        !- Multiplier
+    4,                       !- Number of Vertices
+    8.440942485224,          !- Vertex 1 X-coordinate {m}
+    11.844590782803,         !- Vertex 1 Y-coordinate {m}
+    2.080000000000,          !- Vertex 1 Z-coordinate {m}
+    8.440942485224,          !- Vertex 2 X-coordinate {m}
+    11.844590782803,         !- Vertex 2 Y-coordinate {m}
+    0.000000000000,          !- Vertex 2 Z-coordinate {m}
+    6.410942485225,          !- Vertex 3 X-coordinate {m}
+    11.844590782803,         !- Vertex 3 Y-coordinate {m}
+    0.000000000000,          !- Vertex 3 Z-coordinate {m}
+    6.410942485225,          !- Vertex 4 X-coordinate {m}
+    11.844590782803,         !- Vertex 4 Y-coordinate {m}
+    2.080000000000;          !- Vertex 4 Z-coordinate {m}
+
+BuildingSurface:Detailed,
+    89DD7C,                  !- Name
+    Wall,                    !- Surface Type
+    par ext,           !- Construction Name
+    101-0004 sala,           !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    ,                        !- View Factor to Ground
+    4,                       !- Number of Vertices
+    8.590966424294,          !- Vertex 1 X-coordinate {m}
+    11.844590782803,         !- Vertex 1 Y-coordinate {m}
+    2.800000000000,          !- Vertex 1 Z-coordinate {m}
+    8.590966424294,          !- Vertex 2 X-coordinate {m}
+    11.844590782803,         !- Vertex 2 Y-coordinate {m}
+    0.000000000000,          !- Vertex 2 Z-coordinate {m}
+    6.320918546157,          !- Vertex 3 X-coordinate {m}
+    11.844590782803,         !- Vertex 3 Y-coordinate {m}
+    0.000000000000,          !- Vertex 3 Z-coordinate {m}
+    6.320918546157,          !- Vertex 4 X-coordinate {m}
+    11.844590782803,         !- Vertex 4 Y-coordinate {m}
+    2.800000000000;          !- Vertex 4 Z-coordinate {m}
+
+BuildingSurface:Detailed,
+    7E61A4,                  !- Name
+    Floor,                   !- Surface Type
+    piso ext,          !- Construction Name
+    101-0004 sala,           !- Zone Name
+    Ground,                  !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    NoSun,                   !- Sun Exposure
+    NoWind,                  !- Wind Exposure
+    ,                        !- View Factor to Ground
+    8,                       !- Number of Vertices
+    8.590966424294,          !- Vertex 1 X-coordinate {m}
+    11.844590782803,         !- Vertex 1 Y-coordinate {m}
+    0.000000000000,          !- Vertex 1 Z-coordinate {m}
+    8.590966424292,          !- Vertex 2 X-coordinate {m}
+    7.824579727250,          !- Vertex 2 Y-coordinate {m}
+    0.000000000000,          !- Vertex 2 Z-coordinate {m}
+    3.980979940674,          !- Vertex 3 X-coordinate {m}
+    7.824579727250,          !- Vertex 3 Y-coordinate {m}
+    0.000000000000,          !- Vertex 3 Z-coordinate {m}
+    3.980979940674,          !- Vertex 4 X-coordinate {m}
+    10.494579668539,         !- Vertex 4 Y-coordinate {m}
+    0.000000000000,          !- Vertex 4 Z-coordinate {m}
+    2.800962888815,          !- Vertex 5 X-coordinate {m}
+    10.494579668539,         !- Vertex 5 Y-coordinate {m}
+    0.000000000000,          !- Vertex 5 Z-coordinate {m}
+    2.800962888815,          !- Vertex 6 X-coordinate {m}
+    11.494577364945,         !- Vertex 6 Y-coordinate {m}
+    0.000000000000,          !- Vertex 6 Z-coordinate {m}
+    6.320918546157,          !- Vertex 7 X-coordinate {m}
+    11.494577364945,         !- Vertex 7 Y-coordinate {m}
+    0.000000000000,          !- Vertex 7 Z-coordinate {m}
+    6.320918546157,          !- Vertex 8 X-coordinate {m}
+    11.844590782803,         !- Vertex 8 Y-coordinate {m}
+    0.000000000000;          !- Vertex 8 Z-coordinate {m}
