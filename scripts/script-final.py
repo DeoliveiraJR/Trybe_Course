@@ -20,11 +20,11 @@ def apply_rules_to_fenestration_surfaces(building_surfaces_data, fenestration_su
                 if 'sala' in zone_name and surface_type == 'GlassDoor':
                     fenestration_surface['Name'] = 'pvs-' + fenestration_surface['Name']
                 elif 'quarto' in zone_name and surface_type == 'GlassDoor':
-                    fenestration_surface['Name'] = 'pvq-' + fenestration_surface['Name']    
+                    fenestration_surface['Name'] = 'pvq-' + fenestration_surface['Name']
                 elif 'circ' in zone_name and surface_type == 'GlassDoor':
                     fenestration_surface['Name'] = 'pc-' + fenestration_surface['Name']
                 elif 'studio' in zone_name and surface_type == 'GlassDoor':
-                    fenestration_surface['Name'] = 'pvk-' + fenestration_surface['Name']                
+                    fenestration_surface['Name'] = 'pvk-' + fenestration_surface['Name']
                 elif 'sala' in zone_name and surface_type == 'Window':
                     fenestration_surface['Name'] = 'js-' + fenestration_surface['Name']
                 elif 'quarto' in zone_name and surface_type == 'Window':
