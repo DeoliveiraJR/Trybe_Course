@@ -13,7 +13,7 @@ def apply_rules_to_fenestration_surfaces(building_surfaces_data, fenestration_su
             for building_surface in building_surfaces_data:
                 if building_surface['Name'] == building_surface_name:
                     zone_name = building_surface['Zone Name']
-                    print('zone_name ===', zone_name)
+                    # print('zone_name ===', zone_name)
                     break
 
             if zone_name is not None:
@@ -47,8 +47,8 @@ if __name__ == "__main__":
         building_surfaces_data = parse_building_surface_data(file_path)
         fenestration_surfaces_data = parse_fenestration_surface_data(file_path)
         fenestration_surfaces_data_after = parse_fenestration_surface_data(file_path)
-        print('building_surfaces_data ===', building_surfaces_data)
-        print('fenestration_surfaces_data ===', fenestration_surfaces_data)
+        # print('building_surfaces_data ===', building_surfaces_data)
+        # print('fenestration_surfaces_data ===', fenestration_surfaces_data)
 
         apply_rules_to_fenestration_surfaces(building_surfaces_data, fenestration_surfaces_data_after)
 
